@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0878d1">
-  <meta name="description" content="আমার স্থানীয় সেবা কেন্দ্র — স্থানীয় জরুরি সেবা, হেল্পলাইন, বাজার, কাজের লোক ও এলাকার নোটিশ এক জায়গায়।">
+  <meta name="description" content="আমার স্থানীয় সেবা কেন্দ্র — স্থানীয় জরুরি সেবা, বাজার, কাজের লোক, নোটিশ ও স্থানীয় ব্যবসার বিজ্ঞাপন এক জায়গায়।">
   <link rel="manifest" href="manifest.json">
   <title>আমার স্থানীয় সেবা কেন্দ্র</title>
   <link rel="stylesheet" href="styles.css">
@@ -23,11 +23,16 @@
     <div>
       <span class="eyebrow">LOCAL SERVICE HUB</span>
       <h2>আপনার প্রয়োজনীয় স্থানীয় সেবা খুঁজুন</h2>
-      <p>জরুরি নম্বর, হাসপাতাল, বাজার, কাজের লোক ও এলাকার নোটিশ দ্রুত খুঁজে নিন।</p>
+      <p>জরুরি নম্বর, হাসপাতাল, বাজার, কাজের লোক, নোটিশ ও স্থানীয় ব্যবসা দ্রুত খুঁজে নিন।</p>
     </div>
     <div class="searchbox">
       <span>⌕</span><input id="search" type="search" placeholder="হাসপাতাল, দোকান, ইলেকট্রিশিয়ান...">
     </div>
+  </section>
+
+  <section class="ad-slot" aria-label="বিজ্ঞাপনের স্থান">
+    <span>📢 বিজ্ঞাপনের জায়গা</span>
+    <small>AdSense অনুমোদনের পরে এখানে বিজ্ঞাপন কোড বসানো যাবে</small>
   </section>
 
   <section class="section" id="emergency">
@@ -45,9 +50,30 @@
     <div class="grid" id="marketGrid"></div>
   </section>
 
+  <section class="section monetization">
+    <div class="section-title"><h2>⭐ Featured Local Businesses</h2><span>পেইড লিস্টিং</span></div>
+    <p class="section-subtitle">স্থানীয় ব্যবসা/সেবা প্রদানকারীরা মাসিক প্যাকেজে এখানে প্রচার করতে পারবেন।</p>
+    <div class="grid" id="featuredGrid"></div>
+  </section>
+
+  <section class="section advertise-box">
+    <div class="ad-copy">
+      <span class="eyebrow blue">LOCAL BUSINESS PROMOTION</span>
+      <h2>আপনার ব্যবসার বিজ্ঞাপন দিন</h2>
+      <p>দোকান, ফার্মেসি, রেস্টুরেন্ট, ইলেকট্রিশিয়ান, প্লাম্বার বা অন্য যেকোনো স্থানীয় সেবা এই ওয়েবসাইটে প্রচার করতে পারবেন।</p>
+      <div class="price-row"><span>Basic</span><b>₹100/মাস</b><span>Premium</span><b>₹300/মাস</b></div>
+      <button class="primary-btn" onclick="contactOwner()">📲 বিজ্ঞাপনের জন্য যোগাযোগ করুন</button>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-title"><h2>📢 এলাকার খবর ও নোটিশ</h2></div>
     <div id="noticeList" class="notices"></div>
+  </section>
+
+  <section class="ad-slot" aria-label="বিজ্ঞাপনের স্থান">
+    <span>📢 বিজ্ঞাপনের জায়গা</span>
+    <small>AdSense অনুমোদনের পরে এখানে বিজ্ঞাপন কোড বসানো যাবে</small>
   </section>
 
   <section class="section" id="helplines">
@@ -55,9 +81,9 @@
     <div class="grid" id="helplineGrid"></div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>এই ওয়েবসাইট সম্পর্কে</h2>
-    <p>এটি স্থানীয় মানুষকে জরুরি সেবা ও প্রয়োজনীয় যোগাযোগের তথ্য এক জায়গায় খুঁজে পেতে সাহায্য করার জন্য তৈরি একটি মোবাইল-ফ্রেন্ডলি ওয়েবসাইট।</p>
+    <p>এটি স্থানীয় মানুষকে জরুরি সেবা ও প্রয়োজনীয় যোগাযোগের তথ্য এক জায়গায় খুঁজে পেতে সাহায্য করার জন্য তৈরি একটি মোবাইল-ফ্রেন্ডলি ওয়েবসাইট। স্থানীয় ব্যবসা ও সেবা প্রদানকারীরা পেইড লিস্টিং বা স্পন্সরড বিজ্ঞাপনের মাধ্যমে প্রচার করতে পারবেন।</p>
     <div class="warning">⚠️ প্রকাশের আগে সব স্থানীয় ফোন নম্বর, ঠিকানা ও জরুরি নম্বর যাচাই করে নিন। নমুনা তথ্যের জায়গায় আপনার এলাকার সঠিক তথ্য বসান।</div>
   </section>
 </main>
@@ -66,7 +92,7 @@
   <a href="#top">🏠<span>হোম</span></a>
   <a href="#services">🧰<span>সেবা</span></a>
   <a href="#helplines">☎️<span>হেল্পলাইন</span></a>
-  <a href="#about" onclick="document.querySelector('.about').scrollIntoView({behavior:'smooth'})">ℹ️<span>যোগাযোগ</span></a>
+  <a href="#about">ℹ️<span>যোগাযোগ</span></a>
 </nav>
 
 <script src="app.js"></script>
