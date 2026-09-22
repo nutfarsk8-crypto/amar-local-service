@@ -1,0 +1,10 @@
+{
+  "name": "আমার স্থানীয় সেবা কেন্দ্র",
+  "short_name": "স্থানীয় সেবা",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0878d1",
+  "lang": "bn",
+  "description": "স্থানীয় জরুরি সেবা, হেল্পলাইন, বাজার ও এলাকার তথ্য।"
+}
